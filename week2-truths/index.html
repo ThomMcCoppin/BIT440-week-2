@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Two Truths and a Lie</title>
+    <!--bootstrap5 import-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--header-->
+    <nav class="navbar navbar-light bg-light">
+        <div class="container">
+          <span class="navbar-brand mb-0 h1">Two Truths and a Lie</span>
+        </div>
+      </nav>
+
+    <!--List of options-->
+    <div class="list-group mx-auto" style="width: 40%;">
+        <li class="list-group-item list-group-item-primary">Pick which one you think is the lie!</li>
+        <button type="button" class="list-group-item list-group-item-action">I used to ride dirtbikes <img src="wrong.png" alt="A red X" style="height: 20px; display:none;"></button>
+        <button type="button" class="list-group-item list-group-item-action">I peaked masters in Overwatch <img src="wrong.png" alt="A red X" style="height: 20px; display:none;"></button>
+        <button type="button" class="list-group-item list-group-item-action">I've read the entire Lord of the Rings trilogy <img src="correct.jpg" alt="A green check" style="height: 20px; display:none;"></button>
+      </div>
+    <div class="explained mx-auto" id="explained" style="width: 40%; margin-top:20px; display: none;">
+        <p>I only read the first two books of LOTR :P</p>
+        <p>My family had a field that we rode dirtbikes in whern I was young and I peaked masters back in 2019.</p>
+    </div>
+    <script>
+        //adds loops to add event listeners to 3 buttons and show the correct image
+        var x = document.getElementsByTagName("button");
+        var y = document.getElementsByTagName("img")
+        for(var i=0; i < x.length; i++) {
+                x[i].addEventListener("click", function() {
+                    for (var j=0; j < y.length; j++) {
+                        y[j].style.display = "inline";
+                    }
+                    document.getElementById('explained').style.display = "block";
+            });
+            
+        }
+    </script>
+</body>
+</html>

@@ -20,9 +20,9 @@
     <!--List of options-->
     <div class="list-group mx-auto" style="width: 40%;">
         <li class="list-group-item list-group-item-primary">Pick which one you think is the lie!</li>
-        <button type="button" class="list-group-item list-group-item-action">I used to ride dirtbikes <img src="wrong.png" alt="A red X" style="height: 20px; display:none;"></button>
-        <button type="button" class="list-group-item list-group-item-action">I peaked masters in Overwatch <img src="wrong.png" alt="A red X" style="height: 20px; display:none;"></button>
-        <button type="button" class="list-group-item list-group-item-action">I've read the entire Lord of the Rings trilogy <img src="correct.jpg" alt="A green check" style="height: 20px; display:none;"></button>
+        <button type="button" class="list-group-item list-group-item-action list-group-item-secondary">I used to ride dirtbikes <img src="wrong.png" alt="A red X" style="height: 20px; display:none;"></button>
+        <button type="button" class="list-group-item list-group-item-action list-group-item-success">I peaked masters in Overwatch <img src="wrong.png" alt="A red X" style="height: 20px; display:none;"></button>
+        <button type="button" class="list-group-item list-group-item-action list-group-item-info">I've read the entire Lord of the Rings trilogy <img src="correct.jpg" alt="A green check" style="height: 20px; display:none;"></button>
       </div>
     <div class="explained mx-auto" id="explained" style="width: 40%; margin-top:20px; display: none;">
         <p>I only read the first two books of LOTR :P</p>
@@ -38,6 +38,9 @@
                         y[j].style.display = "inline";
                     }
                     document.getElementById('explained').style.display = "block";
+                    x[0].className += " shadow mb-3 bg-body rounded";
+                    x[1].className += " shadow mb-3 bg-body rounded";
+                    x[2].className += " list-group-item-dark";
             });
             
         }
